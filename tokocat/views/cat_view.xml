@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- elmart_barangmodel.name tree view -->
+<record id="tokocat_cat_view_tree" model="ir.ui.view">
+    <field name="name">Daftar Cat</field>
+    <field name="model">tokocat.cat</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="harga_beli"/>
+            <field name="harga_jual"/>
+            <field name="stock"/>
+            <field name="kelompokbarang_id"/>
+            <field name="supplier_id"/>
+            <field name="kelompok_warna"/>
+        </tree>
+    </field>
+</record>
+
+<!-- elmart.barang form view -->
+<record id="tokocat_cat_view_form" model="ir.ui.view">
+    <field name="name">Form Cat</field>
+    <field name="model">tokocat.cat</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                   <field name="name"/>
+                   <field name="harga_beli"/>
+                   <field name="harga_jual"/>
+                   <field name="stock"/>
+                </group>
+                <group name="jeniscat" string="Kelompok Barang">
+                <field name="kelompokbarang_id"/>
+                <field name="supplier_id"/>
+                <field name="kelompok_warna"/>
+                </group>
+                <!-- <group name="supplier" string="Supplier">
+                    
+                </group>
+                <group name="supplier" string="Kelompok Warna Cat">
+                    
+                </group> -->
+            </sheet>
+        </form>
+    </field>
+</record>
+<!-- elmart.barang action window -->
+<record id="tokocat_cat_action" model="ir.actions.act_window">
+    <field name="name">Daftar Cat</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tokocat.cat</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tokocat_cat_menu_act"
+                 name="Daftar Cat" 
+                 parent="tokocat_cat_menu_categ" 
+                 action="tokocat_cat_action" 
+                 sequence="20"/>
+
+</odoo>

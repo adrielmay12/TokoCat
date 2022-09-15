@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tokocat_jeniscat,access.tokocat.jeniscat,model_tokocat_jeniscat,,1,1,1,1
+access_tokocat_cat,access.tokocat.cat,model_tokocat_cat,,1,1,1,1
+access_tokocat_kelompokwarna,access.tokocat.kelompokwarna,model_tokocat_kelompokwarna,,1,1,1,1
+access_tokocat_kebutuhanlain,access.tokocat.kebutuhanlain,model_tokocat_kebutuhanlain,,1,1,1,1
+access_tokocat_person,access.tokocat.person,model_tokocat_person,,1,1,1,1
+access_tokocat_kasir,access.tokocat.kasir,model_tokocat_kasir,,1,1,1,1
+access_tokocat_supplier,access.tokocat.supplier,model_tokocat_supplier,,1,1,1,1
+access_tokocat_penjualan,access.tokocat.penjualan,model_tokocat_penjualan,,1,1,1,1
+access_tokocat_detailpenjualan,access.tokocat.detailpenjualan,model_tokocat_detailpenjualan,,1,1,1,1
+access_tokocat_barangdatang,access.tokocat.barangdatang,model_tokocat_barangdatang,,1,1,1,1

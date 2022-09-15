@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!-- elmart.kelompokbarang tree view -->
+<record id="tokocat_jeniscat_view_tree" model="ir.ui.view">
+    <field name="name">tokocat.jeniscat.view.tree</field>
+    <field name="model">tokocat.jeniscat</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="kode_cat"/>
+            <field name="kode_rak"/>
+            <field name="jml_item"/>
+            <field name="daftar"/>
+        </tree>
+    </field>
+</record>
+
+<!-- elmart.kelompokbarang form view -->
+<record id="tokocat_jeniscat_view_form" model="ir.ui.view">
+    <field name="name">tokocat.jeniscat.view.form</field>
+    <field name="model">tokocat.jeniscat</field>
+    <field name="arch" type="xml">
+        <form string="Jenis Cat">
+            <sheet>
+                <group name="kelompok" string="Letak Kelompok Cat">
+                   <field name="name" 
+                   required="1"
+                   />
+                    <field name="kode_cat"/>
+                    <field name="jml_item"/>
+                </group>
+                <group name="rak" string="Letak Barang">
+                    <field name="kode_rak"/>
+                    <field name="barang_ids"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- elmart.kelompokbarang action window -->
+    <record id="tokocat_jeniscat_action" model="ir.actions.act_window">
+        <field name="name">Jenis Cat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tokocat.jeniscat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tokocat_jeniscat_menu_act"
+             name="Jenis Cat"
+             parent="tokocat_cat_menu_categ"
+             action="tokocat_jeniscat_action"
+             sequence="10"/>
+
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!-- tokocat_kelompokwarna tree view -->
+<record id="tokocat_kelompokwarna_view_tree" model="ir.ui.view">
+    <field name="name">tokocat.kelompokwarna.view.tree</field>
+    <field name="model">tokocat.kelompokwarna</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="kode_warnacat"/>
+            <!-- <field name="kode_rak"/> -->
+            <!-- <field name="jml_item"/> -->
+            <field name="warna_id"/>
+        </tree>
+    </field>
+</record>
+
+<!-- tokocat_kelompokwarna form view -->
+<record id="tokocat_kelompokwarna_view_form" model="ir.ui.view">
+    <field name="name">tokocat.kelompokwarna.view.form</field>
+    <field name="model">tokocat.kelompokwarna</field>
+    <field name="arch" type="xml">
+        <form string="Kelompok Warna Barang">
+            <sheet>
+                <group name="kelompok" string="Letak Kelompok">
+                   <field name="name" 
+                   required="1"
+                   />
+                    <field name="kode_warnacat"/>
+                </group>
+                <group name="rak" string="Letak Barang">
+                    <field name="warna_id"/>
+                    <!-- <field name="kode_rak"/> -->
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- tokocat_kelompokwarna action window -->
+    <record id="tokocat_kelompokwarna_action" model="ir.actions.act_window">
+        <field name="name">Daftar Kelompok Warna</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tokocat.kelompokwarna</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tokocat_kelompokwarna_menu_act"
+             name="Kelompok Warna"
+             parent="tokocat_cat_menu_categ"
+             action="tokocat_kelompokwarna_action"
+             sequence="30"/>
+
+</odoo>

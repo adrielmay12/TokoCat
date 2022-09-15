@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- model.name tree view -->
+    <record id="tokocat_supplier_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Supplier</field>
+        <field name="model">tokocat.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alamat"/>
+                <field name="no_telp"/>
+                <field name="cat_id"/>
+                <field name="kebutuhan"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <!-- elmart.supplier form view -->
+    <record id="tokocat_supplier_view_form" model="ir.ui.view">
+        <field name="name">Form Supplier</field>
+        <field name="model">tokocat.supplier</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="alamat"/>
+                        <field name="no_telp"/>
+                        <field name="cat_id"/>
+                        <field name="kebutuhan"/>
+                    </group>
+                    <!-- <group name="cat" string="Daftar Cat">
+                        
+                    </group>
+                    <group name="kebthan" string="Daftar Kebutuhan Lain">
+                        
+                    </group> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- elmart.supplier action window -->
+    <record id="tokocat_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tokocat.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tokocat_supplier_menu_act" 
+                    name="Supplier" 
+                    parent="tokocat_menu_root" 
+                    action="tokocat_supplier_action" 
+                    sequence="40"/>
+</odoo>
